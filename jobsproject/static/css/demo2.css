@@ -1,0 +1,14 @@
+h1{
+  color: green;
+
+}
+table,td,th{
+  border: 2px solid red;
+
+}
+img{
+margin-left: 200px;
+}
+table{
+  margin: auto;
+}

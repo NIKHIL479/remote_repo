@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static 'css/demo2.css' %}">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 align='center'><u>hyderabad jobs information</u></h1>
+
+  <img src="{% static 'images/hydimg1.jpg' %}" alt="" height="200px" width="200px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <img src="{% static 'images/hydimg2.jpg' %}" alt="" height="200px" width="200px">
+  <img src="{% static 'images/hydimg3.jpg' %}" alt="" height="200px" width="200px">
+  <img src="{% static 'images/guido.jpg' %}" alt="" height="200px" width="200px">
+  <img src="{% static 'images/guido.jpg' %}" alt="" height="200px" width="200px">
+  <br><br><br><br>
+    {% if jobs_list %}
+    <table>
+      <thead>
+        <th>date</th>
+        <th>company</th>
+        <th>title</th>
+        <th>eligibility</th>
+        <th>address</th>
+        <th>email</th>
+        <th>phone</th>
+      </thead>
+      {% for job in jobs_list %}
+      <tr>
+        <td>{{job.date}}</td>
+        <td>{{job.company}}</td>
+        <td>{{job.title}}</td>
+        <td>{{job.eligibility}}</td>
+        <td>{{job.address}}</td>
+        <td>{{job.email}}</td>
+        <td>{{job.phonenumber}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>no records found</p>
+    {% endif %}
+  </body>
+</html>
